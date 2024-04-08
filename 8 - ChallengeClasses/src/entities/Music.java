@@ -1,6 +1,6 @@
 package entities;
 
-public class Music {
+public class Music implements Comparable<Music> {
 
     private String title;
     private String artist;
@@ -71,4 +71,8 @@ public class Music {
 
     }
 
+    @Override
+    public int compareTo(Music music) {
+        return music.year - this.year;
+    }
 }
